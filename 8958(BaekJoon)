@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	char q[80];
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {		/* 각 케이스 개수*/
+		
+		scanf("%s", &q);
+		int sum = 0;
+		int j = 0;
+		int score = 0;
+
+		while (q[j] != NULL) {			/*q[j]가 NULL이면 스탑*/
+				if (q[j] == 'O') {		
+					score = score + 1;
+					sum = sum + score;
+				}
+				else {
+					score = 0;
+				}
+				j = j + 1;		
+		}
+		printf("%d\n", sum);
+	}
+	return 0;
+}
